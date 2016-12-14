@@ -5,11 +5,15 @@ python3 setup.py build
 python3 setup.py install --user
 export PATH=$HOME/.local/bin:$PATH
 ```
-Example usage (running snakemake directly):
+Run snakemake pipeline on local machine:
 ```shell
 snakemake --cores 2 --latency-wait 3600
 ```
-Example usage (use bash wrapper to run snakemake):
+Or run locally via a wrapper:
 ```shell
 ./run_snakemake
+```
+Submit pipeline to SLURM (a master log for the pipeline process is created in current directory):
+```shell
+sbatch run_snakemake_slurm
 ```

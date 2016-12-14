@@ -1,0 +1,4 @@
+#!/bin/bash
+#SBATCH -D ./
+snakemake --cores 2 --latency-wait 3600
+

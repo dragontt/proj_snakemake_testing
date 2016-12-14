@@ -1,0 +1,26 @@
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	read_text
+	1	write_text1
+	1	write_text2
+	4
+rule write_text2:
+	output: /scratch/mblab/yiming.kang/proj_snakemake_testing/data/tmp2.txt
+rule write_text1:
+	output: /scratch/mblab/yiming.kang/proj_snakemake_testing/data/tmp1.txt
+Submitted batch job 2429208
+Submitted batch job 2429209
+Waiting at most 3600 seconds for missing files.
+Waiting at most 3600 seconds for missing files.
+1 of 4 steps (25%) done
+2 of 4 steps (50%) done
+rule read_text:
+	input: /scratch/mblab/yiming.kang/proj_snakemake_testing/data/tmp1.txt, /scratch/mblab/yiming.kang/proj_snakemake_testing/data/tmp2.txt
+	output: /scratch/mblab/yiming.kang/proj_snakemake_testing/data/tmp3.txt
+3 of 4 steps (75%) done
+localrule all:
+	input: /scratch/mblab/yiming.kang/proj_snakemake_testing/data/tmp3.txt
+4 of 4 steps (100%) done
